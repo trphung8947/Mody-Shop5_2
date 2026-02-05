@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mady">
+    <meta name="theme-color" content="#3b82f6">
+    <title>Liên Hệ - Mady</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+    <div class="w-10 h-10 overflow-hidden rounded-full flex items-center justify-center">
+        <img src="images/logo.png" alt="ModelPro Logo" class="w-full h-full object-cover">
+    </div>
+    <span class="text-2xl font-bold text-gray-800">Mady</span>
+</div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Trang Chủ</a>
+                    <a href="products.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Sản Phẩm</a>
+                    <a href="reviews.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Đánh Giá</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link active">Liên Hệ</a>
+                    <button id="cart-btn" class="relative p-2 text-gray-700 hover:text-blue-500 transition duration-300">
+                        <span class="text-2xl">🛒</span>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform scale-0 transition-transform duration-200">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-500 py-2">Trang Chủ</a>
+                <a href="products.html" class="block text-gray-700 hover:text-blue-500 py-2">Sản Phẩm</a>
+                <a href="reviews.html" class="block text-gray-700 hover:text-blue-500 py-2">Đánh Giá</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-500 py-2">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Liên Hệ Với Mady</h1>
+            <p class="text-xl text-gray-600">Chúng tôi sẵn sàng giúp bạn tìm thẻ bài hoàn hảo cho bộ sưu tập của mình</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Contact Info Box 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-4xl">📍</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Địa Chỉ</h3>
+                                <p class="text-gray-600">123 Đường Nguyễn Huệ</p>
+                                <p class="text-gray-600">Quận 1, TP. Hồ Chí Minh</p>
+                                <p class="text-gray-600">Việt Nam</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Box 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-4xl">📞</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Điện Thoại</h3>
+                                <p class="text-gray-600">Hotline: <span class="font-bold text-yellow-500">0123 456 789</span></p>
+                                <p class="text-gray-600">Thứ 2 - Thứ 7: 8:00 - 18:00</p>
+                                <p class="text-gray-600">Chủ nhật: 8:00 - 12:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Box 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-4xl">📧</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Email</h3>
+                                <p class="text-gray-600">contact@mady.vn</p>
+                                <p class="text-gray-600">support@mady.vn</p>
+                                <p class="text-gray-600">Trả lời trong 24 giờ</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Box 4 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition duration-300">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-4xl">⏰</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Giờ Làm Việc</h3>
+                                <p class="text-gray-600">Thứ 2 - Thứ 6: 9:00 - 17:00</p>
+                                <p class="text-gray-600">Thứ 7: 9:00 - 13:00</p>
+                                <p class="text-gray-600">Chủ nhật: Nghỉ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-white py-16 border-t">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Tìm Chúng Tôi Trên Bản Đồ</h2>
+            <div class="bg-gray-300 rounded-lg overflow-hidden shadow-lg h-96 flex items-center justify-center">
+                <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4434661093927!2d106.67095961177362!3d10.777099361690976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3812d1fa45%3A0x1f9e6f5e0e0e0e0!2z4bqhIEPhu5F1bmcgTOS6uixcdSA0LCBIbyBDaGkgTWluaCBDaXR5!5e0!3m2!1sen!2s!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-gradient-to-r from-yellow-50 to-orange-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Câu Hỏi Thường Gặp</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">💳 Các phương thức thanh toán?</h3>
+                    <p class="text-gray-600">Chúng tôi chấp nhận: Chuyển khoản ngân hàng, Ví điện tử (Momo, Zalopay), Thanh toán khi nhận hàng (COD).</p>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">🚚 Chi phí vận chuyển?</h3>
+                    <p class="text-gray-600">Miễn phí vận chuyển cho đơn hàng trên 500K. Với đơn hàng dưới 500K, phí vận chuyển là 30K.</p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">📦 Thời gian giao hàng?</h3>
+                    <p class="text-gray-600">Trong TP. Hồ Chí Minh: 1-2 ngày. Tỉnh khác: 2-5 ngày. Giao hàng nhanh có thêm phí.</p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">🔄 Chính sách hoàn trả?</h3>
+                    <p class="text-gray-600">Hoàn trả trong 30 ngày nếu sản phẩm bị lỗi. Hoàn tiền 100% trong 7 ngày làm việc.</p>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">❓ Sản phẩm có giấy chứng thực?</h3>
+                    <p class="text-gray-600">Có. Tất cả sản phẩm đều có giấy chứng thực nguyên liệu và kiểm định chất lượng.</p>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">🎁 Có thể mua làm quà tặng?</h3>
+                    <p class="text-gray-600">Có. Chúng tôi cung cấp dịch vụ bao gói quà đẹp miễn phí và có thể viết lời nhắn gửi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Mady</h4>
+                    <p class="text-gray-400">Thẻ bài sưu tầm nhân vật 3D độc bản cá nhân hóa. Kết hợp công nghệ 3D với thiết kế mỹ thuật cho cộng đồng fan game, anime, truyện tranh.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Trang Chủ</a></li>
+                        <li><a href="products.html" class="hover:text-blue-400">Sản Phẩm</a></li>
+                        <li><a href="reviews.html" class="hover:text-blue-400">Đánh Giá</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liên Hệ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 contact@mady.vn</li>
+                        <li>📱 0123456789</li>
+                        <li>📍 TP. Cần Thơ, Việt Nam</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Mạng Xã Hội</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400">Facebook</a>
+                        <a href="#" class="hover:text-blue-400">Instagram</a>
+                        <a href="#" class="hover:text-blue-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Mady - Thẻ Bài Sưu Tầm 3D. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

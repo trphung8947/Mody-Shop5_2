@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mady">
+    <meta name="theme-color" content="#3b82f6">
+    <title>Sản Phẩm Thẻ Bài - Mady</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+    <div class="w-10 h-10 overflow-hidden rounded-full flex items-center justify-center">
+        <img src="images/logo.png" alt="ModelPro Logo" class="w-full h-full object-cover">
+    </div>
+    <span class="text-2xl font-bold text-gray-800">Mady</span>
+</div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Trang Chủ</a>
+                    <a href="products.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link active">Sản Phẩm</a>
+                    <a href="reviews.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Đánh Giá</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Liên Hệ</a>
+                    <button id="cart-btn" class="relative p-2 text-gray-700 hover:text-blue-500 transition duration-300">
+                        <span class="text-2xl">🛒</span>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform scale-0 transition-transform duration-200">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-500 py-2">Trang Chủ</a>
+                <a href="products.html" class="block text-gray-700 hover:text-blue-500 py-2">Sản Phẩm</a>
+                <a href="reviews.html" class="block text-gray-700 hover:text-blue-500 py-2">Đánh Giá</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-500 py-2">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block mb-4 px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm font-semibold">
+                ✨ BỘSƯU TẦM ĐỘCBẢN
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Thẻ Bài Sưu Tầm 3D</h1>
+            <p class="text-xl text-blue-100 max-w-2xl mx-auto">Bộ sưu tập thẻ bài nhân vật độc bản với QR code xem mô hình 3D tương tác. Mỗi thẻ được in 3D độc lập, chất lượng cao.</p>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Sản Phẩm Nổi Bật</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-4"></div>
+                <p class="text-lg text-gray-600">Chọn từ bộ sưu tập đa dạng của chúng tôi</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">🏠</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Nhà Cổ Điển</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Chi tiết với các phòng bên trong</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">350.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">🚂</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Tàu Hỏa Cổ Điển</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Xe lửa có thể chạy được</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">620.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">✈️</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Máy Bay Chiến Đấu</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Máy bay quân sự tỉ lệ 1:72</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">420.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">⛩️</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Đền Thờ Nhật Bản</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Kiến trúc truyền thống Nhật Bản</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">280.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.7</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">🚗</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Xe Ô Tô Cổ Điển</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Xe Ford Mustang 1960s</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">450.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.9</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">🏰</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Lâu Đài Châu Âu</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Lâu đài Neuschwanstein 3D</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">520.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">🚢</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Tàu Thuyền Chiến</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Tàu chiến lớp Yamato</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">680.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 4.8</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 product-card flex flex-col">
+                    <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative overflow-hidden">
+                        <div class="text-6xl transition duration-300 hover:scale-110">🤖</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mô Hình Robot Gundam</h3>
+                        <p class="text-gray-600 text-sm mb-4 flex-grow leading-relaxed">Robot anime RX-78 cao 20cm</p>
+                        <div class="mb-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent">1.200.000₫</span>
+                                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm font-semibold">⭐ 5.0</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-3 rounded-lg hover:shadow-lg transition duration-300 font-semibold text-center hover:from-blue-600 hover:to-indigo-700">
+                            📞 Liên Hệ Đặt
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Nhận Thông Tin Khuyến Mãi</h2>
+                <p class="text-xl text-white mb-8">Đăng ký để nhận các ưu đãi độc quyền và sản phẩm mô hình mới</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                <h4 class="text-lg font-bold mb-4">Mady</h4>
+                <p class="text-gray-400">Thẻ bài sưu tầm nhân vật 3D độc bản cá nhân hóa. Kết hợp công nghệ 3D với thiết kế mỹ thuật cho cộng đồng fan game, anime, truyện tranh.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Trang Chủ</a></li>
+                        <li><a href="products.html" class="hover:text-blue-400">Sản Phẩm</a></li>
+                        <li><a href="reviews.html" class="hover:text-blue-400">Đánh Giá</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liên Hệ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                    <li>📧 contact@mady.vn</li>
+                        <li>📱 0123456789</li>
+                        <li>📍 TP. Cần Thơ, Việt Nam</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Mạng Xã Hội</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400">Facebook</a>
+                        <a href="#" class="hover:text-blue-400">Instagram</a>
+                        <a href="#" class="hover:text-blue-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+            <p>&copy; 2026 Mady - Thẻ Bài Sưu Tầm 3D. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

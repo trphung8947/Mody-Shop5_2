@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Mady">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="description" content="Thẻ bài sưu tầm nhân vật anime, game, truyện tranh với thiết kế độc bản cá nhân hóa. Mỗi thẻ đi kèm mã QR để xem mô hình 3D tương tác.">
+    <title>Mody - Thẻ Bài Sưu Tầm Nhân Vật 3D Cá Nhân Hóa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+          <div class="flex items-center space-x-2">
+    <div class="w-12 h-12 overflow-hidden rounded-full flex items-center justify-center border border-gray-200">
+        <img src="images/logo.png" alt="ModelPro Logo" class="w-full h-full object-cover">
+    </div>
+    <span class="text-2xl font-bold text-gray-800">Mady</span>
+</div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link active">Trang Chủ</a>
+                    <a href="products.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Sản Phẩm</a>
+                    <a href="reviews.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Đánh Giá</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-semibold transition duration-300 nav-link">Liên Hệ</a>
+                    <button id="cart-btn" class="relative p-2 text-gray-700 hover:text-blue-500 transition duration-300">
+                        <span class="text-2xl">🛒</span>
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform scale-0 transition-transform duration-200">0</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="mobile-menu-btn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html" class="block text-gray-700 hover:text-blue-500 py-2">Trang Chủ</a>
+                <a href="products.html" class="block text-gray-700 hover:text-blue-500 py-2">Sản Phẩm</a>
+                <a href="reviews.html" class="block text-gray-700 hover:text-blue-500 py-2">Đánh Giá</a>
+                <a href="contact.html" class="block text-gray-700 hover:text-blue-500 py-2">Liên Hệ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-50 to-indigo-50 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
+                        Sưu Tầm Nhân Vật <span class="text-blue-500">Độc Bản 3D</span> Cá Nhân Hóa
+                    </h1>
+                    <p class="text-xl text-gray-600">
+                        Thẻ bài sưu tầm nhân vật anime, game, truyện tranh với thiết kế độc bản cá nhân hóa. Mỗi thẻ bài đi kèm mã QR - quét để xem mô hình 3D tương tác trên điện thoại. Kết hợp công nghệ in 3D hiện đại với thiết kế mỹ thuật tinh xảo.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="products.html" class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-3 rounded-full hover:shadow-xl transition duration-300 font-bold inline-block text-center min-h-12 flex items-center justify-center">
+                            Khám Phá Sản Phẩm
+                        </a>
+                        <a href="contact.html" class="border-2 border-blue-500 text-blue-500 px-8 py-3 rounded-full hover:bg-blue-50 transition duration-300 font-bold inline-block text-center min-h-12 flex items-center justify-center">
+                            Đặt Hàng Ngay
+                        </a>
+                    </div>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8 pt-8">
+                        <div>
+                            <p class="text-3xl font-bold text-blue-500">500+</p>
+                            <p class="text-gray-600">Khách Sưu Tầm</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-blue-500">1000+</p>
+                            <p class="text-gray-600">Thẻ Bài Độc Lạ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-300 to-indigo-300 rounded-3xl opacity-30 blur-2xl"></div>
+                    <div class="relative bg-white rounded-3xl p-8 shadow-2xl">
+                        <div class="aspect-square bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-8xl mb-4">�</div>
+                                <p class="text-2xl font-bold text-blue-700">Thẻ Bài 3D</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Tại Sao Chọn Mady?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-8 rounded-xl hover:shadow-lg transition duration-300 bg-gray-50">
+                    <div class="text-5xl mb-4">✨</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Độc Bản Cá Nhân Hóa</h3>
+                    <p class="text-gray-600">Mỗi thẻ bài được thiết kế và in riêng, mang tính cá nhân hóa cao. Không có thẻ nào giống nhau</p>
+                </div>
+                <div class="text-center p-8 rounded-xl hover:shadow-lg transition duration-300 bg-gray-50">
+                    <div class="text-5xl mb-4">📱</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Mã QR Tương Tác 3D</h3>
+                    <p class="text-gray-600">Quét mã QR trên thẻ để xem mô hình nhân vật 3D chi tiết trên điện thoại của bạn</p>
+                </div>
+                <div class="text-center p-8 rounded-xl hover:shadow-lg transition duration-300 bg-gray-50">
+                    <div class="text-5xl mb-4">🎨</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Thiết Kế Mỹ Thuật</h3>
+                    <p class="text-gray-600">Kết hợp công nghệ in 3D với thiết kế mỹ thuật tinh xảo, chất lượng cao</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo Offers Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Combo Sưu Tập Theo Chủ Đề</h2>
+                <p class="text-xl text-gray-600">Tiết kiệm hơn khi mua theo bộ</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-pink-50 to-red-50 rounded-xl p-6 border-2 border-pink-200 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-pink-600 mb-3">🎮 Combo Game</h3>
+                    <p class="text-gray-600 mb-4">Bộ thẻ nhân vật từ game nổi tiếng</p>
+                    <p class="text-sm text-gray-500 mb-4">Gồm 5 thẻ bài + hộp đựng</p>
+                    <p class="text-2xl font-bold text-pink-600">199.000₫</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-2 border-blue-200 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-blue-600 mb-3">📺 Combo Anime</h3>
+                    <p class="text-gray-600 mb-4">Bộ thẻ các nhân vật anime hot nhất</p>
+                    <p class="text-sm text-gray-500 mb-4">Gồm 8 thẻ bài + hộp đựng</p>
+                    <p class="text-2xl font-bold text-blue-600">299.000₫</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-200 hover:shadow-lg transition">
+                    <h3 class="text-2xl font-bold text-purple-600 mb-3">📚 Combo Manga</h3>
+                    <p class="text-gray-600 mb-4">Bộ thẻ nhân vật từ truyện tranh nổi tiếng</p>
+                    <p class="text-sm text-gray-500 mb-4">Gồm 6 thẻ bài + hộp đựng</p>
+                    <p class="text-2xl font-bold text-purple-600">249.000₫</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="bg-gradient-to-r from-pink-400 to-pink-300 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div>
+                    <div class="bg-gray-900 text-yellow-400 text-3xl font-bold rounded-2xl px-8 py-4 mb-8 inline-block">
+                        GIÁ TRỊ SẢN PHẨM
+                    </div>
+                    <div class="bg-white rounded-2xl p-8">
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-4">•</span>
+                                <span class="text-lg text-gray-800 font-semibold">Sản phẩm độc bản, cá nhân hóa cao - Không có thẻ nào giống nhau</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-4">•</span>
+                                <span class="text-lg text-gray-800 font-semibold">Kết hợp công nghệ 3D và thủ công mỹ thuật - Chất lượng cao</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-2xl mr-4">•</span>
+                                <span class="text-lg text-gray-800 font-semibold">Tăng trải nghiệm tương tác qua mã quét xem mô hình 3D</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Image/Character -->
+                <div class="flex justify-center">
+                    <img src="images/qr.jpg" alt="Mã QR Mady" class="w-64 h-64 rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Sẵn Sàng Bắt Đầu Sưu Tập?</h2>
+            <p class="text-xl text-white mb-8">Tham gia cộng đồng 500+ nhà sưu tầm thẻ bài độc bản Mady</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Mady</h4>
+                    <p class="text-gray-400">Thẻ bài sưu tầm nhân vật 3D độc bản cá nhân hóa. Kết hợp công nghệ 3D với thiết kế mỹ thuật cho cộng đồng fan game, anime, truyện tranh.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-blue-400">Trang Chủ</a></li>
+                        <li><a href="products.html" class="hover:text-blue-400">Sản Phẩm</a></li>
+                        <li><a href="reviews.html" class="hover:text-blue-400">Đánh Giá</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liên Hệ</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 contact@mady.vn</li>
+                        <li>📱 0123456789</li>
+                        <li>📍 TP. Cần Thơ, Việt Nam</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Mạng Xã Hội</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-blue-400">Facebook</a>
+                        <a href="#" class="hover:text-blue-400">Instagram</a>
+                        <a href="#" class="hover:text-blue-400">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Mady - Thẻ Bài Sưu Tầm 3D. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
